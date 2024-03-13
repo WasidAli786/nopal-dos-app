@@ -46,9 +46,7 @@ export async function getAllPopularItems() {
 
 export async function getAllCategoriesData() {
   const res = await fetch(`${baseURL}${GET_ALL_CATEGORIES_DATA_ENDPOINT}`, {
-    next: {
-      revalidate: 60,
-    },
+    cache: "no-store",
   });
 
   if (!res.ok) {
