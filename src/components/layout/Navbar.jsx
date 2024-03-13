@@ -163,7 +163,7 @@ const Navbar = () => {
                 </ButtonUI>
               )}
             </div>
-            {user?.id && (
+            {/* {user?.id && (
               <Dropdown placement="bottom-end">
                 <DropdownTrigger>
                   <Avatar
@@ -209,7 +209,7 @@ const Navbar = () => {
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-            )}
+            )} */}
             <div className="block md:hidden">
               <ButtonUI
                 isIconOnly
