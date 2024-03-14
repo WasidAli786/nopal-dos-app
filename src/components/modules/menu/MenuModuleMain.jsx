@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import CategoriesTabs from "./CategoriesTabs";
 import CategoryCard from "./CategoryCard";
 import PopularItemsSection from "./PopularItemsSection";
+import MenuItemsList from "./MenuItemsList";
 
 const MenuModuleMain = ({
   categoriesList,
@@ -89,6 +90,7 @@ const MenuModuleMain = ({
           <PopularItemsSection popularItemsList={popularItemsList} />
         </div>
       </div>
+      <MenuItemsList />
       {/* <div className="container">
         {allCategoriesData?.map((item) => {
           return (

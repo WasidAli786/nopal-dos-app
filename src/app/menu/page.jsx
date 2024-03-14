@@ -6,18 +6,17 @@ import {
 } from "@/config/api/server/menu.api";
 
 async function MenuMain() {
-  const [categoriesList, popularItemsList, allCategoriesData] =
-    await Promise.all([
-      getAllCategoriesList(),
-      getAllPopularItems(),
-      getAllCategoriesData(),
-    ]);
+  const [categoriesList, popularItemsList] = await Promise.all([
+    getAllCategoriesList(),
+    getAllPopularItems(),
+    // getAllCategoriesData(),
+  ]);
   return (
     <>
       <MenuModuleMain
         categoriesList={categoriesList}
         popularItemsList={popularItemsList}
-        allCategoriesData={allCategoriesData}
+        // allCategoriesData={allCategoriesData}
       />
     </>
   );
