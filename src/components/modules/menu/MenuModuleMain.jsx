@@ -8,7 +8,7 @@ import PopularItemsSection from "./PopularItemsSection";
 const MenuModuleMain = ({
   categoriesList,
   popularItemsList,
-  allCategoriesData,
+  // allCategoriesData,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const sections = useRef([]);
@@ -89,7 +89,7 @@ const MenuModuleMain = ({
           <PopularItemsSection popularItemsList={popularItemsList} />
         </div>
       </div>
-      <div className="container">
+      {/* <div className="container">
         {allCategoriesData?.map((item) => {
           return (
             <div key={item?.id} data-section id={item?.name} className="mt-10">
@@ -102,7 +102,7 @@ const MenuModuleMain = ({
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 };
