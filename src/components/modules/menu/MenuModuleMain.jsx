@@ -4,12 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import CategoriesTabs from "./CategoriesTabs";
 import CategoryCard from "./CategoryCard";
 import PopularItemsSection from "./PopularItemsSection";
-import MenuItemsList from "./MenuItemsList";
 
 const MenuModuleMain = ({
   categoriesList,
   popularItemsList,
-  // allCategoriesData,
+  allCategoriesData,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const sections = useRef([]);
@@ -90,8 +89,7 @@ const MenuModuleMain = ({
           <PopularItemsSection popularItemsList={popularItemsList} />
         </div>
       </div>
-      <MenuItemsList />
-      {/* <div className="container">
+      <div className="container">
         {allCategoriesData?.map((item) => {
           return (
             <div key={item?.id} data-section id={item?.name} className="mt-10">
@@ -104,7 +102,7 @@ const MenuModuleMain = ({
             </div>
           );
         })}
-      </div> */}
+      </div>
     </>
   );
 };

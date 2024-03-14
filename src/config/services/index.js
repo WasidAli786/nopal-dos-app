@@ -27,7 +27,6 @@ import {
   GET_USER_INFO_ENDPOINT,
   GET_STRIPE_PAYMENT_INTENT,
   CREATE_PAYMENT_ENDPOINT,
-  GET_ALL_CATEGORIES_DATA_ENDPOINT,
 } from "../constant/endPoints";
 import { get, post, put, del } from "./api.request";
 
@@ -121,9 +120,6 @@ const Services = {
   },
   getStripePaymentIntent: () => {
     return post(GET_STRIPE_PAYMENT_INTENT);
-  },
-  getMenuList: () => {
-    return get(GET_ALL_CATEGORIES_DATA_ENDPOINT);
   },
 };
 export default Services;

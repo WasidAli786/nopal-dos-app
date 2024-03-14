@@ -45,7 +45,9 @@ export async function getAllPopularItems() {
 }
 
 export async function getAllCategoriesData() {
-  const res = await fetch(`${baseURL}${GET_ALL_CATEGORIES_DATA_ENDPOINT}`);
+  const res = await fetch(`${baseURL}${GET_ALL_CATEGORIES_DATA_ENDPOINT}`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
